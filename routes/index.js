@@ -1,10 +1,10 @@
 const router = require("express").Router()
-const Todo = require("../models/Todo");
+const Item = require("../models/Item");
 
-// routes will be here....
+// App Routes
 router.get("/", async(req, res) => {
-    const allTodo = await Todo.find();
-    res.render("index", {todo: allTodo})
+    const allItem = await Item.find();
+    res.render("index", {item: allItem})
 })
 
 
